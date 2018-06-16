@@ -6,3 +6,17 @@
  * and `phone` information.
  *
  */
+function getUsers(callback){
+    $.get('https://randomuser.me/api?results=10',function(data){
+        callback(data.results);
+    });
+}
+
+getUsers(function(users){
+    let userNames = users.map(function(user){
+        return{
+            name : user.name
+        }
+    });
+    console.log(userNames);
+})

@@ -135,3 +135,11 @@ let users = [
 
 // TODO: console.log the transformed array of objects
 // that only contains the name from the above users array
+
+let userNames = users.map(function(user){
+  return {
+    name : user.name
+  }
+});
+
+console.log(userNames[0].name);

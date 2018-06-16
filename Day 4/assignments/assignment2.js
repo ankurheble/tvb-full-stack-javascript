@@ -7,3 +7,12 @@
  * caller via the callback (or function) provided
  * as the second argument
  */
+function getMeContent(url,callback){
+    $.get(url,function(data){
+        callback(data);
+    });
+}
+
+getMeContent('https://randomuser.me/api',function(data){
+    console.log(data);
+});

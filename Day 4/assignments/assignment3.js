@@ -3,8 +3,17 @@
  * as it's first argument, a time (in milliseconds) as
  * it's second argument and a callback as it's third
  * argument.
- * 
+ *
  * `printNameLater` should return the string that was passed to it
  * back to the caller (caller is the line in which printNameLater was called)
  * after the time has passed.
  */
+function printNameLater(str, millis, callback) {
+  setTimeout(function() {
+    callback(str);
+  }, millis);
+}
+
+printNameLater("Ankur", 3000, function(str) {
+  console.log(str);
+});
