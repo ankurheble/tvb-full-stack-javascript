@@ -13,10 +13,11 @@ function getUsers(callback){
 }
 
 getUsers(function(users){
+    console.log(users);
     let userNames = users.map(function(user){
         return{
             name : user.name
         }
     });
     console.log(userNames);
-})
+});
