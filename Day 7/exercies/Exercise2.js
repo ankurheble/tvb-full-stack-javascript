@@ -1,8 +1,8 @@
 /** Write a custom implementation of
  * Array.prototype.map called Array.prototype.transform */
-Array.prototype.customMap = function(callback) {
+Array.prototype.transform = function(callback) {
   if (typeof callback !== "function") {
-    return;
+    return this;
   }
   var newArray = [];
   for (var i = 0; i < this.length; i++) {
@@ -14,7 +14,7 @@ Array.prototype.customMap = function(callback) {
 
 let numbers = [1, 2, 3, 4, 5];
 
-let newNumbers = numbers.customMap(function(num){
+let newNumbers = numbers.transform(function(num){
     return num*2;
 });
 

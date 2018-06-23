@@ -1,9 +1,9 @@
 /** Write a custom implementation of
  * Array.prototype.filter called Array.prototype.search
  */
-Array.prototype.customFilter = function(callback) {
+Array.prototype.search = function(callback) {
   if (typeof callback !== "function") {
-    return;
+    return this;
   }
   var filteredArray = [];
   for (var i = 0; i < this.length; i++) {
@@ -16,7 +16,7 @@ Array.prototype.customFilter = function(callback) {
 
 let numbers = [1, 2, 3, 4, 5];
 
-let newNumbers = numbers.customFilter(function(num){
+let newNumbers = numbers.search(function(num){
     return num !== 3;
 });
 

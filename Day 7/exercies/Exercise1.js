@@ -3,7 +3,7 @@
  */
 Array.prototype.each = function(callback) {
   if (typeof callback !== "function") {
-    return;
+    return this;
   }
 
   for (var i = 0; i < this.length; i++) {
