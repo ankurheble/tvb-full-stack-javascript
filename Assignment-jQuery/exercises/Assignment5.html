@@ -41,6 +41,7 @@
   </ul>
 
   <!-- include jquery here -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script>
     /**
      * Objective: Use javascript to add todos
@@ -52,6 +53,10 @@
      * Example: If the button#increment is clicked 5 times and button#decrement is clicked 3 times,
      * div#counter should have the value 2
      * */
+    $('button#add').on('click',function(event){
+      $('#todo-list').append('<li><input type="checkbox">'+ $('#todo').val()+'</li>');
+      $('#todo').val('');
+    });
   </script>
 </body>
 

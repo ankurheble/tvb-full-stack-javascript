@@ -21,6 +21,7 @@
   <div id="box"></div>
 
   <!-- include jquery here -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script>
     /**
      * Objective: Use javascript to change the size of the box
@@ -28,6 +29,14 @@
      * - Use jquery to listen for mouseover (or hover) on div#box
      * - When the mouse hovers over the box, change it's size to 300x300 px
      * */
+    $('#box').on('mouseover',function(event){
+      $('#box').css("width","300px");
+      $('#box').css("height","300px");
+    });
+    $('#box').on('mouseout',function(event){
+      $('#box').css("width","150px");
+      $('#box').css("height","150px");
+    });
   </script>
 </body>
 

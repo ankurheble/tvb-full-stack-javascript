@@ -7,7 +7,7 @@
   <title>Click Handlers</title>
 </head>
 <body>
-  
+  <input type="button" id="btn1"/>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script>
     /**
@@ -17,6 +17,10 @@
      * - Use jquery to listen for clicks on that button
      * - When the button is clicked, `console.log` the message 'Clicked'
      **/
+    $("#btn1").on('click',function(event){
+      event.preventDefault();
+      console.log("Clicked");
+    });
   </script>
 </body>
 </html>
